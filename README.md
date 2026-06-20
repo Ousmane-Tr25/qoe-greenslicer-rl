@@ -81,3 +81,19 @@ This project demonstrates reinforcement learning, simulation, telecom domain kno
 - Add real traffic traces or NS-3 generated traces.
 - Add explicit base-station and 5G core energy models.
 - Add Streamlit visualization for policy behavior.
+
+## Results preview
+
+The experiment compares three resource allocation policies for QoE-aware and energy-efficient 5G network slicing:
+
+| Policy | Mean reward | Mean QoE | Mean energy | Overload events |
+|---|---:|---:|---:|---:|
+| Heuristic | 0.262 | 0.869 | 0.896 | 24.48 |
+| Q-learning | 0.233 | 0.874 | 0.896 | 26.70 |
+| Random | -0.859 | 0.804 | 0.871 | 92.53 |
+
+The heuristic policy achieves the best overall reward and significantly reduces overload events compared with the random baseline.  
+The Q-learning policy obtains the highest mean QoE, but with slightly more overload events in this lightweight experiment.
+
+![Policy comparison](docs/assets/policy_comparison.png)
+
