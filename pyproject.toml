@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qoe-greenslicer-rl"
+version = "0.1.0"
+description = "Lightweight reinforcement learning baseline for QoE and energy-aware 5G slicing"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
